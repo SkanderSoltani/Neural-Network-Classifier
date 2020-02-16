@@ -1,10 +1,5 @@
 ## Welcome to my Github Page: 
-```markdown
-![aa.jpg](src)
-
-
-
-```
+![](aa.jpg)
 
 
 
