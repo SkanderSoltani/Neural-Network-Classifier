@@ -19,6 +19,8 @@ LogisticAnn is a personal project/memo developed with the goal to thoroughly stu
 Artificial neural networks or connectionist systems are computing systems vaguely inspired by the biological neural networks that constitute animal brains. Such systems "learn" to perform tasks by considering examples, generally without being programmed with task-specific rules.
 
 ### Components:
+![](Neural_Network_Classifier.pdf)
+
 ```markdown
 Syntax highlighted code block
 
