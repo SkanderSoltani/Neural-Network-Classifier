@@ -39,7 +39,7 @@ $\sqrt{2}$.
 
 
 ```markdown
-Syntax highlighted code block
+<img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
 \sqrt{2}
 $\sqrt{2}$.
 # Header 1
