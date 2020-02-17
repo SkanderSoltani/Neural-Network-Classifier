@@ -28,14 +28,22 @@ The optimization underlying the Neural Networks computation is based on gradient
   #### 1.The forward propagation:  
   The forward propagation algorithms’ task is to propagate the information forward from the input to the output layers using a          combination of two functions of which one is linear, the second is the activation function. The algorithm describing the forward propagation process for a one hidden layer network is as follow:
 ```math
-$`\sqrt{2}`$.
+$\sqrt{2}$.
+\sqrt{2}
 ```
+
+\begin{equation}
+\sqrt{2}
+$\sqrt{2}$.
+
+\end{equation}
 
 
 
 ```markdown
 Syntax highlighted code block
-
+\sqrt{2}
+$\sqrt{2}$.
 # Header 1
 ## Header 2
 ### Header 3
