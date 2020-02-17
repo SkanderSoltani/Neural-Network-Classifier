@@ -27,7 +27,7 @@ Neural Networks consist of 3 type of layers: 1. Input layer, 2. Hidden layers, 3
 There are three steps in the computation process of Neural Networks: 
 The optimization underlying Neural Networks computations is based on gradients. Hence, there are 2 main steps in the optimization: 
 #### 1. Initialization:
-Initialization of the weights is done once; only at the beggining of the process. The initialization process can have drastic impact on the convergence as well as the speed of the algorithm. We chose to initialize our weights such that are normally distributed with mean of 0 and variance <img src="https://latex.codecogs.com/svg.latex?\Large&space;\frac{1}{n^{l-1}" />  
+Initialization of the weights is done once; only at the beggining of the process. The initialization process can have drastic impact on the convergence as well as the speed of the algorithm. We chose to initialize our weights such that are normally distributed with mean of 0 and variance <img src="https://latex.codecogs.com/svg.latex?\Large&space;\frac{1}{n^{l-1}" title="\Large \frac{1}{n^{l-1}"/>  
 #### 2.The Forward Propagation:  
   The forward propagation algorithms’ task is to propagate the information forward from the input to the output layers using a          combination of two functions of which one is linear, the second is the activation function. The algorithm describing the forward propagation process for a one hidden layer network is as follow:
 
