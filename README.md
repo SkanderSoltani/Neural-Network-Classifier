@@ -1,5 +1,5 @@
 ## Welcome to my Github page: 
-![](memory.jpg)
+![](Memory.jpg)
 
 
 
