@@ -27,8 +27,8 @@ Neural Networks consist of 3 type of layers: 1. Input layer, 2. Hidden layers, 3
 The optimization underlying the Neural Networks computation is based on gradients. Hence, there are 2 main steps in the optimization: 
   #### 1.The forward propagation:  
   The forward propagation algorithms’ task is to propagate the information forward from the input to the output layers using a          combination of two functions of which one is linear, the second is the activation function. The algorithm describing the forward propagation process for a one hidden layer network is as follow:
-```markdown
-$ Z = W^' @ X_{0}$
+```math
+Z = W^' @ X_{0}
 ```
 
 
