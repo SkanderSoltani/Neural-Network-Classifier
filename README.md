@@ -21,6 +21,15 @@ Artificial neural networks or connectionist systems are computing systems vaguel
 ### Components:
 ![](NN.png)
 
+Neural Networks consist of 3 type of layers: 1. Input layer, 2. Hidden layers, 3. Output layer. In the example above it is a one-layer NN (We do not count input & output layers). Each layer consists of one or several neurons (blue circles in the diagram above) that get activated by an activation function. There are several activation functions used, in this project, our class will give the option to either use “tanh – Hyperbolic Tangent” or ” Relu – Rectified Linear Unit” functions for the hidden layers and will use the sigmoid for the output layer. 
+
+###Computation:
+The optimization underlying the Neural Networks computation is based on gradients. Hence, there are 2 main steps in the optimization: 
+  #### 1.The forward propagation:  
+  The forward propagation algorithms’ task is to propagate the information forward from the input to the output layers using a          combination of two functions of which one is linear, the second is the activation function. The algorithm describing the forward propagation process for a one hidden layer network is as follow:
+  Z = W.t @ X_0
+
+
 ```markdown
 Syntax highlighted code block
 
