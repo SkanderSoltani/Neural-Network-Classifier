@@ -34,7 +34,7 @@ The optimization underlying Neural Networks computations is based on gradients. 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;Z_{1}=W_{1}'X" title="\Large Z_{1}=W_{1}'X" />
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;A_{1}=g(Z_{1})" title="\Large A_{1}=g(Z_{1})" />
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;Z_{2}=W_{2}'A_{1}" title="\Large Z_{2}=W_{2}'A_{1}" />
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;A_{2}=AL=sigmoid(Z_[2})" title="\Large A_{2}=AL=sigmoid(Z_[2})" />
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;A_{2}=AL=sigmoid(Z_[2})" title="\Large A_{2}=AL=sigmoid(Z_{2})" />
 
 #### 2.The Forward Propagation: 
 \begin{equation}
