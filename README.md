@@ -17,7 +17,7 @@ Neural Networks consist of 3 type of layers: 1. Input layer, 2. Hidden layers, 3
 There are three steps in the computation process of Neural Networks: 
 The optimization underlying Neural Networks computations is based on gradients. Hence, there are 2 main steps in the optimization: 
 #### 1. Initialization:
-Initialization of the weights is done once; only at the beggining of the process. The initialization process can have drastic impact on the convergence as well as the speed of the algorithm. We chose to initialize our weights such that are normally distributed with mean of 0 and variance <img src="https://latex.codecogs.com/svg.latex?\Large&space;\sigma^2 =\frac{1}{n_{l-1}}}" title="\Large \sigma^2 =\frac{1}{n_{l-1}}" /> where <img src="https://latex.codecogs.com/svg.latex?\Large&space;n_{l-1}" title="\Large n_{l-1}" /> is the the numbers of neurons in the previous layer. The bias unit <img src="https://latex.codecogs.com/svg.latex?\Large&space;b" title="\Large b" /> is initialized to 0.<br>
+Initialization of the weights is done once; only at the beggining of the process. The initialization process can have drastic impact on the convergence as well as the speed of the algorithm. We chose to initialize our weights such that are normally distributed with mean of 0 and variance <img src="https://latex.codecogs.com/svg.latex?\Large&space;\sigma^2 =\frac{1}{n_{l-1}}}" title="\Large " /> where <img src="https://latex.codecogs.com/svg.latex?\Large&space;n_{l-1}" title="\Large n_{l-1}" /> is the the numbers of neurons in the previous layer. The bias unit <img src="https://latex.codecogs.com/svg.latex?\Large&space;b" title="\Large b" /> is initialized to 0.<br>
 
 
 #### 2.The Forward Propagation:  
