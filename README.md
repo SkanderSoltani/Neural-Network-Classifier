@@ -31,8 +31,8 @@ Initialization of the weights is done once; only at the beggining of the process
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;A_{2}=AL=sigmoid(Z_{2})" title="\Large A_{2}=AL=sigmoid(Z_{2})" />
 
 Where:
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;X:}" title="\Large X:" /> IS the input matrix with dimensions (n,m); n being the number of features and "m" the training sample size.
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;X:\space is \space the \space input \space matrix \space \with dimentions \space (n,m)" title="\Large X:\space is \space the \space input \space matrix \space \with dimentions \space (n,m) " />
 
 
 The method responsible to propagate information from layer to layer is described below: 
