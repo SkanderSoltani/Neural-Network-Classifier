@@ -31,7 +31,10 @@ Initialization of the weights is done once; only at the beggining of the process
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;A_{2}=AL=sigmoid(Z_{2})" title="\Large A_{2}=AL=sigmoid(Z_{2})" />
 
 Where:
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;X:}" title="\Large X:" /> IS the input matrix with dimensions (n,m); n being the number of features and "m" the training sample size.
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;X:}" title="\Large X:" /> <- is the input matrix with dimensions (n,m); "n" being the number of features and "m" the training sample size.
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;b_{i}:}" title="\Large b_{i}:" /> <- is the bias unit at each layer of size <img src="https://latex.codecogs.com/svg.latex?\Large&space;(n_{l},m)}" title="\Large (n_{l},m)" /> where <img src="https://latex.codecogs.com/svg.latex?\Large&space;'n_{l}'}" title="\Large (n_{l},m)" /> is size of layer "l" and "m" is the training sample size. 
 
 
 
