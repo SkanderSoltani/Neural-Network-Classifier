@@ -24,7 +24,7 @@ Initialization of the weights is done once; only at the beggining of the process
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;Z_{1}=W_{1}'X+b_{1}" title="\Large Z_{1}=W_{1}'X + b_[1}" />
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;A_{1}=g(Z_{1})" title="\Large A_{1}=g(Z_{1})" />
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;Z_{2}=W_{2}'A_{1} + b_{2}" title="\Large Z_{2}=W_{2}'A_{1}+b_{2}" />
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;Z_{2}=W_{2}'A_{1}+b_{2}" title="\Large Z_{2}=W_{2}'A_{1}+b_{2}" />
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;A_{2}=AL=sigmoid(Z_{2})" title="\Large A_{2}=AL=sigmoid(Z_{2})" />
 
 code:
