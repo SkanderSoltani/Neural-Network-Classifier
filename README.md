@@ -41,7 +41,7 @@ Where:
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;g(x):}" title="\Large g(x):" /> <-  is the activation function for layer <img src="https://latex.codecogs.com/svg.latex?\Large&space;l}" title="\Large l" />. Our class gives the option to use a "relu" or "tanh" functions.<br>
 <u>relu:</u> <br><img src="https://latex.codecogs.com/svg.latex?\Large&space;g(x)=(Z_{l},0)^{+}" title="\Large g(x)=(Z_{l},0)^{+}" /><br>
 
-<u>tanh:</u>,br> <img src="https://latex.codecogs.com/svg.latex?\Large&space;g(x)=\frac{sinh(x)}{cosh(x)}" title="\Large g(x)=\frac{sinh(x)}{cosh(x)}" />
+<u>tanh:</u><br> <img src="https://latex.codecogs.com/svg.latex?\Large&space;g(x)=\frac{sinh(x)}{cosh(x)}" title="\Large g(x)=\frac{sinh(x)}{cosh(x)}" />
 
 The method responsible to propagate information from layer to layer is described below: 
 ```python
