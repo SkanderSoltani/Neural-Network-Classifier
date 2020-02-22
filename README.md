@@ -28,7 +28,7 @@ Initialization of the weights is done once; only at the beggining of the process
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;A_{2}=AL=sigmoid(Z_{2})" title="\Large A_{2}=AL=sigmoid(Z_{2})" />
 
 code:
-```markdown
+```python
  def _forwardProp(self,A_prev, W, b, activation):
         """
         Implementation of the forward propagation algorithm
