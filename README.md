@@ -22,8 +22,10 @@ Initialization of the weights is done once; only at the beggining of the process
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;W_{l}\sim\mathcal{N}(\mu=0,\sigma^2=\frac{1}{n_{l-1}})" title="\Large W_{l}\sim\mathcal{N}(\mu=0,\sigma^2=\frac{1}{n_{l-1}})" /> <br>
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;b=0" title="\Large b=0" />
 
-More information on initialization as well as on the issues of exploding and vanishing gradients can be found here: https://www.deeplearning.ai/ai-notes/initialization/
-
+More information on initialization as well as on the issues of exploding and vanishing gradients can be found here: 
+```rmarkdown
+https://www.deeplearning.ai/ai-notes/initialization/
+```
 Initialization code:
 ```python
 def _initialize_parameters(self,layer_dim):
