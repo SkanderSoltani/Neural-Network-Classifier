@@ -19,7 +19,35 @@ The optimization underlying Neural Networks computations is based on gradients. 
 #### 1. Initialization:
 Initialization of the weights is done once; only at the beggining of the process. The initialization process can have drastic impact on the convergence as well as the speed of the algorithm. We chose to initialize our weights such that are normally distributed with mean of 0 and variance <img src="https://latex.codecogs.com/svg.latex?\Large&space;\sigma^2=\frac{1}{n_{l-1}}" title="\Large \sigma^2=\frac{1}{n_{l-1}}" />  where <img src="https://latex.codecogs.com/svg.latex?\Large&space;n_{l-1}" title="\Large n_{l-1}" /> is the the numbers of neurons in the previous layer. The bias unit <img src="https://latex.codecogs.com/svg.latex?\Large&space;b" title="\Large b" /> is initialized to 0.<br>
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;W_{l}\sim\mathcal{N}(\mu=0,\sigma^2=\frac{1}{n_{l-1}})" title="\Large W_{l}\sim\mathcal{N}(\mu=0,\sigma^2=\frac{1}{n_{l-1}})" />
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;W_{l}\sim\mathcal{N}(\mu=0,\sigma^2=\frac{1}{n_{l-1}})" title="\Large W_{l}\sim\mathcal{N}(\mu=0,\sigma^2=\frac{1}{n_{l-1}})" /> <br>
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;b=0" title="\Large b=0" />
+
+More information on initialization as well as on the issues of exploding and vanishing gradients can be found here: https://www.deeplearning.ai/ai-notes/initialization/
+
+Initialization code:
+```python
+def _initialize_parameters(self,layer_dim):
+        """
+        Arguments:
+            layer_dim  <- a list containing the dimentions of each layer in the network
+        Returns:
+            Parameters <- a dictionary containing parameters "W1","b1".."Wl","bl"...."WL","bL". where "L" is the number of the final output layer in the network
+                            "Wl" - Matrix of weights of shape (layer_dim(l),layer_dim(l-1))
+                            "bl  - Vector of the bias nodes of shape (leyer_dim(l),1)
+        """
+        np.random.seed(3) # Fixing the seed in order to get the same result (helps for debugging)
+        parameters = {}
+        L = len(layer_dim) 
+        for l in range(1,L):
+            parameters["W" + str(l)] = np.random.randn(layer_dim[l],layer_dim[l-1]) *  2 / np.sqrt(layer_dim[l-1])# the purpose of the perturb is to make the initialized weights very close to 0
+            parameters["b" + str(l)] = np.zeros((layer_dim[l],1))
+            # Just to make sure that each weight and bias matrix is of the appropriate shape
+            assert(parameters["W" + str(l)].shape == (layer_dim[l],layer_dim[l-1]))
+            assert(parameters["b" + str(l)].shape == (layer_dim[l],1))
+        
+        return parameters
+
+```
 
 
 
