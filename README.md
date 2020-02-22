@@ -79,7 +79,7 @@ Where:
    
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;sigmoid(x):}" title="\Large sigmoid(x):" /> <- is an activation function applied solonely to the last layer.<br> <img src="https://latex.codecogs.com/svg.latex?\Large&space;sigmoid(x)=\frac{1}{1+e^{-x}}" title="\Large " />
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;L(A_{2},Y)=-\frac{1}{m}(Ylog(A_{2})+(1-Y)log(1-A_{2}))" title="\Large L(A_{2},Y)=-\frac{1}{m}(Ylog(A_{2})+(1-Y)log(1-A_{2}))" /> 
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;L(A_{2},Y)=-\frac{1}{m}(Ylog(A_{2})+(1-Y)log(1-A_{2}))+\lambda\mathbf{W}_{2}" title="\Large L(A_{2},Y)=-\frac{1}{m}(Ylog(A_{2})+(1-Y)log(1-A_{2}))+\lambda\mathbf{W}_{2}" /> 
 
 The method responsible to propagate information from layer to layer is described below: 
 ```python
