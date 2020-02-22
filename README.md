@@ -55,7 +55,7 @@ def _initialize_parameters(self,layer_dim):
 
 #### 2.Forward Propagation:  
   The forward propagation algorithms’ task is to propagate the information forward from the input to the output layers using a          combination of two functions of which one is linear, the second is the activation function. The algorithm describing the forward propagation process for a one hidden layer network is as follow:
-
+![](forward_process.png)
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;Z_{1}=W_{1}'X+b_{1}" title="\Large Z_{1}=W_{1}'X + b_[1}" />
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;A_{1}=g(Z_{1})" title="\Large A_{1}=g(Z_{1})" />
