@@ -22,12 +22,38 @@ Initialization of the weights is done once; only at the beggining of the process
 #### 2.The Forward Propagation:  
   The forward propagation algorithms’ task is to propagate the information forward from the input to the output layers using a          combination of two functions of which one is linear, the second is the activation function. The algorithm describing the forward propagation process for a one hidden layer network is as follow:
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;for l in layers:" title="for l in layers:" />
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;Z_{1}=W_{1}'X" title="\Large Z_{1}=W_{1}'X" />
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;A_{1}=g(Z_{1})" title="\Large A_{1}=g(Z_{1})" />
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;Z_{2}=W_{2}'A_{1}" title="\Large Z_{2}=W_{2}'A_{1}" />
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;A_{2}=AL=sigmoid(Z_[2})" title="\Large A_{2}=AL=sigmoid(Z_{2})" />
 
+code:
+```markdown
+ def _forwardProp(self,A_prev, W, b, activation):
+        """
+        Implementation of the forward propagation algorithm
+        Arguments:
+            A_prev     <- The activation matrix results of the previous layer of shape (number of nodes in the previous layer, m)
+            W          <- Matrix of weights of the current layer of shape (number of nodes in the current layer, number of nodes in the previous layer)
+            b          <- Matrix of bais units of the current layer of shape (number of nodes in the current layer,1)
+            activation <- The activation function used to activate the current layer. stored as a text string: "sigmoid","relu" or "tanh"
+        Returns:
+            A          <- The activation matrix results of the current layer of shape (number of nodes in the current layer, m)
+            cache      <- a tuple containing (A_prev,W,b,Z)
+        """
+        Z = np.dot(W,A_prev) + b # the linear activation
+        if activation == "sigmoid":
+            A = self._sigmoid(Z)
+        elif activation == "relu":
+            A = self._relu(Z)
+        elif activation == "tanh":
+            A = np.tanh(Z)
+        
+        cache = (A_prev,W,b,Z)
+        
+        return A,cache
+
+```
 #### 2.The Forward Propagation: 
 \begin{equation}
 \sqrt{2}
