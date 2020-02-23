@@ -1,4 +1,5 @@
-## Ride Hard or Stay Home -- Welcome to my Github Page 
+# Welcome to my Github Page 
+## Ride Hard or Stay Home 
 ![](Memory.jpg)
 
 
@@ -109,8 +110,86 @@ The method responsible to propagate information from layer to layer is described
 
 ```
 #### 3.Backpropagation: 
+Backpropagation "Backpropagation of errors" is algorithm used in the training process of Neural Networks. It is based on the chain rule od derivative calculus and helps us calculate the gradients of the target variables (W,b) with respect to the Loss function L.   
 ![](forward_backpropagation.png)
 
+Backpropagation snippet:
+```python
+def _backProp(self,dA,cache,activation):
+        """
+        Implement the backward propagation using linear backprop function.
+        
+        Arguments:
+        dA         <- post-activation gradient for current layer l 
+        cache      <- a tuple containing (A_prev,W,b,Z) of the current layer
+        activation <- the activation to be used in this layer, stored as a text string: "sigmoid", "relu" or "tanh"
+        
+        Returns:
+        dA_prev    <- Gradient of the cost with respect to the activation (of the previous layer l-1), same shape as A_prev
+        dW         <-Gradient of the cost with respect to W (current layer l), same shape as W
+        db         <-Gradient of the cost with respect to b (current layer l), same shape as b
+        """
+        
+        
+        if activation == "sigmoid":
+            dZ = self._sigmoid_backward(dA,cache)
+            dW,db,dA_prev = self._linear_backward(dZ,cache)
+            return dW,db,dA_prev
+        elif activation == "relu":
+            dZ = self._relu_backward(dA,cache)
+            dW,db,dA_prev = self._linear_backward(dZ,cache)
+            return dW,db,dA_prev
+        elif activation == "tanh":
+            dZ = self._tanh_backward(dA,cache)
+            dW,db,dA_prev = self._linear_backward(dZ,cache)
+            return dW,db,dA_prev
+            
+
+    def _L_model_backProp(self,AL, Y ,activation ,caches,lambd):
+        """
+        Implement the backward propagation for the (relu or tanh) * (L-1) -> LINEAR -> SIGMOID last layer L
+        
+        Arguments:
+        AL         <- probability vector, output of the forward propagation (L_model_forwardProp())
+        Y          <- true "label" target variable in the supervised learning problem size (1,m)
+        Activation <- the activation to be used in the hidden, stored as a text string:  "relu" or "tanh"
+        caches     <- list of caches containing all caches for each layer. each cache is a tuple containing  (A_prev,W,b,Z) 
+
+                    
+        Returns:
+        grads -- A dictionary with the gradients
+                grads["dA" + str(l)] = ... 
+                grads["dW" + str(l)] = ...
+                grads["db" + str(l)] = ... 
+        """
+        grads ={}
+        L = len(caches) # The number of layers
+        m = AL.shape[1] # number of training examples
+        Y = Y.reshape(AL.shape)
+
+        epsilon = 1e-7
+
+        # Starting back propagation by computing dAL given a sigmoid activation function for the last layer L  
+        dAL = np.divide(-19 * Y,AL+epsilon) + np.divide((1-Y),(1-AL)+epsilon)
+        
+        # retrieving the cache tuple of layer L
+        cache_L = caches[L-1]
+        _, W, _,_ = cache_L
+        # getting the gradient of layer L
+        grads["dW"+str(L)],grads["db"+str(L)],grads["dA"+str(L-1)] = self._backProp(dA=dAL,cache = cache_L,activation="sigmoid")
+        grads["dW"+str(L)] = grads["dW"+str(L)] + (lambd/m) * W
+
+        #loop from l=L-2 to l=0 to calculate the rest of the gradient through each layer
+        for l in reversed(range(L-1)):
+            cache_l = caches[l]
+            _, W, _,_ = cache_l
+            dW_temp,db_temp,dA_prev_temp =  self._backProp(grads["dA"+str(l+1)],cache_l,activation)
+            grads["dA"+str(l)]   = dA_prev_temp
+            grads["dW"+str(l+1)] = dW_temp + (lambd/m) * W
+            grads["db"+str(l+1)] = db_temp
+
+        return grads
+```
 
 
 ```markdown
