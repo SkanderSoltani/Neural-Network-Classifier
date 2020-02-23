@@ -114,7 +114,8 @@ Backpropagation "Backpropagation of errors" is algorithm used in the training pr
 ![](forward_backpropagation.png)
 
 ##### Gradients Calculation:
-<img src="https://render.githubusercontent.com/render/math?math=\frac{dL}{\partial A^{[2]}}=\frac{d}{\partial A^{[2]}}[-\frac{1}{m}(Ylog(A^{[2]})+(1-Y)log(1-A^{[2]})+\lambda\sum_{l=1}^{L}\|W^{[l]}\|_2^2]">
+<img src="https://render.githubusercontent.com/render/math?math=\frac{dL}{\partial A^{[2]}}=\frac{d}{\partial A^{[2]}}[-\frac{1}{m}(Ylog(A^{[2]})+(1-Y)log(1-A^{[2]})+\lambda\sum_{l=1}^{L}\|W^{[l]}\|_2^2]"> <br>
+<img src="https://render.githubusercontent.com/render/math?math=\Longrightarrow\frac{dL}{\partial A^{[2]}}=\frac{1}{m}[\frac{-Y}{A^{[2]}}+\frac{1-Y}{1-A^{[2]}}]">
 
 
 
