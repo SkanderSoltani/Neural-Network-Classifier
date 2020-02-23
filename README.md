@@ -78,7 +78,7 @@ Where:
 
    <u>tanh:</u><br>   <img src="https://latex.codecogs.com/svg.latex?\Large&space;g(x)=\frac{sinh(x)}{cosh(x)}=\frac{e^x-e^{-x}}{e^x+e^{-x}}" title="\Large g(x)=\frac{sinh(x)}{cosh(x)}=\frac{e^x-e^{-x}}{e^x+e^{-x}}" />
    
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;sigmoid(x):}" title="\Large sigmoid(x):" /> <- is an activation function applied solonely to the last layer.<br> <img src="https://latex.codecogs.com/svg.latex?\Large&space;sigmoid(x)=\frac{1}{1+e^{-x}}" title="\Large " />
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;sigmoid(x):}" title="\Large sigmoid(x):" /> <- is an activation function applied solonely to the last layer.<br> <img src="https://latex.codecogs.com/svg.latex?\Large&space;sigmoid(x)=\frac{1}{1+e^{-x}}" title="\Large sigmoid(x)=\frac{1}{1+e^{-x}" />
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;L(A_{2},Y)=-\frac{1}{m}(Ylog(A^{[2]})+(1-Y)log(1-A^{[2]})+\lambda\sum_{l=1}^{L}\|W^{[l]}\|_2^2" title="\Large -\frac{1}{m}(Ylog(A^{[2]})+(1-Y)log(1-A^{[2]})+\lambda\sum_{l=1}^{L}\|W^{[l]}\|_2^2" /> 
 
@@ -112,6 +112,14 @@ The method responsible to propagate information from layer to layer is described
 #### 3.Backpropagation: 
 Backpropagation "Backpropagation of errors" is algorithm used in the training process of Neural Networks. It is based on the chain rule od derivative calculus and helps us calculate the gradients of the target variables (W,b) with respect to the Loss function L.   
 ![](forward_backpropagation.png)
+
+##### Gradients Calculation:
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;\frac{dL}{\partial A^{[2]}} = \frac{d}{\partial A^{[2]}} [-\frac{1}{m}(Ylog(A^{[2]})+(1-Y)log(1-A^{[2]})+\lambda\sum_{l=1}^{L}\|W^{[l]}\|_2^2]" title="\Large \frac{dL}{\partial A^{[2]}} = \frac{d}{\partial A^{[2]}} [-\frac{1}{m}(Ylog(A^{[2]})+(1-Y)log(1-A^{[2]})+\lambda\sum_{l=1}^{L}\|W^{[l]}\|_2^2]" /> <br>
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;\Longrightarrow \frac{dL}{\partial A^{[2]}}=\frac{1}{m}[\frac{-Y}{A^{[2]}}+\frac{1-Y}{1-A^{[2]}}]" title="\Large \Longrightarrow \frac{dL}{\partial A^{[2]}}=\frac{1}{m}[\frac{-Y}{A^{[2]}}+\frac{1-Y}{1-A^{[2]}}]" />
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;" title="\Large " />
+
+
 
 Backpropagation snippet:
 ```python
