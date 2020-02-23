@@ -114,8 +114,8 @@ Backpropagation "Backpropagation of errors" is algorithm used in the training pr
 ![](forward_backpropagation.png)
 
 ##### Gradients Calculation:
-
-
+![](grad1.png)
+![](grad2.png)
 
 
 Backpropagation snippet:
