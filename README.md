@@ -1,4 +1,4 @@
-# Welcome to my Github Page 
+
 ## Ride Hard or Stay Home 
 ![](images/Memory.jpg)
 
@@ -10,7 +10,7 @@ LogisticAnn is a personal project/memo developed with the goal to thoroughly stu
 Artificial neural networks or connectionist systems are computing systems inspired by the biological neural networks that constitute animal brains. Such systems "learn" to perform tasks by considering examples, generally without being programmed with task-specific rules.
 
 ### Components:
-![](NN.png)
+![](images/NN.png)
 
 Neural Networks consist of 3 type of layers: 1. Input layer, 2. Hidden layers, 3. Output layer. In the example above it is a one-layer NN (We do not count input & output layers). Each layer consists of one or several neurons (blue circles in the diagram above) that get activated by an activation function. There are several activation functions used, in this project, our class gives the option to either use “tanh – Hyperbolic Tangent” or ” Relu – Rectified Linear Unit” functions for the hidden layers and will use the sigmoid for the output layer. 
 
@@ -56,7 +56,7 @@ def _initialize_parameters(self,layer_dim):
 
 #### 2.Forward Propagation:  
   The forward propagation algorithms’ task is to propagate the information forward from the input to the output layers using a          combination of two functions of which one is linear, the second is the activation function. The algorithm describing the forward propagation process for a one hidden layer network is as follow:
-![](forward_process.png)
+![](images/forward_process.png)
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;Z_{1}=W_{1}'X+b_{1}" title="\Large Z_{1}=W_{1}'X + b_[1}" />
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;A_{1}=g(Z_{1})" title="\Large A_{1}=g(Z_{1})" />
@@ -111,11 +111,11 @@ The method responsible to propagate information from layer to layer is described
 ```
 #### 3.Backpropagation: 
 Backpropagation "Backpropagation of errors" is algorithm used in the training process of Neural Networks. It is based on the chain rule od derivative calculus and helps us calculate the gradients of the target variables (W,b) with respect to the Loss function L.   
-![](forward_backpropagation.png)
+![](images/forward_backpropagation.png)
 
 ##### Gradients Calculation:
-![](grad1.png)
-![](grad2.png)
+![](images/grad1.png)
+![](images/grad2.png)
 
 
 Backpropagation snippet:
