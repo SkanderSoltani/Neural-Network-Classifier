@@ -109,6 +109,7 @@ The method responsible to propagate information from layer to layer is described
 
 ```
 #### 3.Backpropagation: 
+![](forward_backpropagation.png)
 
 
 
