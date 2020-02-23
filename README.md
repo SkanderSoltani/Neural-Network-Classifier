@@ -15,10 +15,10 @@ Artificial neural networks or connectionist systems are computing systems inspir
 Neural Networks consist of 3 type of layers: 1. Input layer, 2. Hidden layers, 3. Output layer. In the example above it is a one-layer NN (We do not count input & output layers). Each layer consists of one or several neurons (blue circles in the diagram above) that get activated by an activation function. There are several activation functions used, in this project, our class gives the option to either use “tanh – Hyperbolic Tangent” or ” Relu – Rectified Linear Unit” functions for the hidden layers and will use the sigmoid for the output layer. 
 
 ##### Computation:
-There are three steps in the computation process of Neural Networks: Initialization, Forward-propagation, backpropagation. 
+There are four main processes envolved in the training phase of Neural Networks: Initialization, Forward-propagation, Backpropagation and  Optimization. 
  
 ### 1. Initialization:
-Initialization of the weights is done once; only at the beggining of the process. The initialization process can have drastic impact on the convergence as well as the speed of the algorithm. We chose to initialize our weights such that are normally distributed with mean of 0 and variance <img src="https://latex.codecogs.com/svg.latex?\Large&space;\sigma^2=\frac{1}{n_{l-1}}" title="\Large \sigma^2=\frac{1}{n_{l-1}}" />  where <img src="https://latex.codecogs.com/svg.latex?\Large&space;n_{l-1}" title="\Large n_{l-1}" /> is the the numbers of neurons in the previous layer. The bias unit <img src="https://latex.codecogs.com/svg.latex?\Large&space;b" title="\Large b" /> is initialized to 0.<br>
+Initialization of the weights is done once; only at the beggining of the process. The initialization process can have drastic impact on the convergence as well as the speed of the algorithm. We chose to initialize our weights such that they are normally distributed with mean 0 and variance <img src="https://latex.codecogs.com/svg.latex?\Large&space;\sigma^2=\frac{1}{n_{l-1}}" title="\Large \sigma^2=\frac{1}{n_{l-1}}" />  where <img src="https://latex.codecogs.com/svg.latex?\Large&space;n_{l-1}" title="\Large n_{l-1}" /> is the the numbers of neurons in the previous layer. The bias unit <img src="https://latex.codecogs.com/svg.latex?\Large&space;b" title="\Large b" /> is initialized to 0.<br>
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;W_{l}\sim\mathcal{N}(\mu=0,\sigma^2=\frac{1}{n_{l-1}})" title="\Large W_{l}\sim\mathcal{N}(\mu=0,\sigma^2=\frac{1}{n_{l-1}})" /> <br>
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;b=0" title="\Large b=0" />
@@ -195,6 +195,8 @@ def _backProp(self,dA,cache,activation):
 
         return grads
 ```
+
+### 4. Optimization:
 
 
 
