@@ -3,21 +3,21 @@
 ![](images/Memory.jpg)
 
 
-### Project Description
+## Project Description
 LogisticAnn is a personal project/memo developed with the goal to thoroughly study Neural Networks along with Backpropagation and a plethora of gradient based optimization techniques used in the field.  During this journey, we will also derive all the formulas and implement the ensemble in a python class called LogisticAnn. The longer goal is to learn the mathematics underlying Neural Networks enough to be able to design and implement bespoke solutions adapted to specific problems as needed. In addition, this memo will serve as a reference point for upcoming projects. 
 
-### Definition of Neural Networks
+## Definition of Neural Networks
 Artificial neural networks or connectionist systems are computing systems inspired by the biological neural networks that constitute animal brains. Such systems "learn" to perform tasks by considering examples, generally without being programmed with task-specific rules.
 
-### Components:
+## Components:
 ![](images/NN.png)
 
 Neural Networks consist of 3 type of layers: 1. Input layer, 2. Hidden layers, 3. Output layer. In the example above it is a one-layer NN (We do not count input & output layers). Each layer consists of one or several neurons (blue circles in the diagram above) that get activated by an activation function. There are several activation functions used, in this project, our class gives the option to either use “tanh – Hyperbolic Tangent” or ” Relu – Rectified Linear Unit” functions for the hidden layers and will use the sigmoid for the output layer. 
 
-### Computation:
-There are three steps in the computation process of Neural Networks: 
-The optimization underlying Neural Networks computations is based on gradients. Hence, there are 2 main steps in the optimization: 
-#### 1. Initialization:
+##### Computation:
+There are three steps in the computation process of Neural Networks: Initialization, Forward-propagation, backpropagation. 
+ 
+### 1. Initialization:
 Initialization of the weights is done once; only at the beggining of the process. The initialization process can have drastic impact on the convergence as well as the speed of the algorithm. We chose to initialize our weights such that are normally distributed with mean of 0 and variance <img src="https://latex.codecogs.com/svg.latex?\Large&space;\sigma^2=\frac{1}{n_{l-1}}" title="\Large \sigma^2=\frac{1}{n_{l-1}}" />  where <img src="https://latex.codecogs.com/svg.latex?\Large&space;n_{l-1}" title="\Large n_{l-1}" /> is the the numbers of neurons in the previous layer. The bias unit <img src="https://latex.codecogs.com/svg.latex?\Large&space;b" title="\Large b" /> is initialized to 0.<br>
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;W_{l}\sim\mathcal{N}(\mu=0,\sigma^2=\frac{1}{n_{l-1}})" title="\Large W_{l}\sim\mathcal{N}(\mu=0,\sigma^2=\frac{1}{n_{l-1}})" /> <br>
@@ -54,7 +54,7 @@ def _initialize_parameters(self,layer_dim):
 
 
 
-#### 2.Forward Propagation:  
+### 2.Forward Propagation:  
   The forward propagation algorithms’ task is to propagate the information forward from the input to the output layers using a          combination of two functions of which one is linear, the second is the activation function. The algorithm describing the forward propagation process for a one hidden layer network is as follow:
 ![](images/forward_process.png)
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;Z_{1}=W_{1}'X+b_{1}" title="\Large Z_{1}=W_{1}'X + b_[1}" />
@@ -109,7 +109,7 @@ The method responsible to propagate information from layer to layer is described
         return A,cache
 
 ```
-#### 3.Backpropagation: 
+### 3.Backpropagation: 
 Backpropagation "Backpropagation of errors" is algorithm used in the training process of Neural Networks. It is based on the chain rule od derivative calculus and helps us calculate the gradients of the target variables (W,b) with respect to the Loss function L.   
 ![](images/forward_backpropagation.png)
 
