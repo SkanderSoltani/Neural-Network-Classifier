@@ -80,7 +80,7 @@ Where:
    
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;sigmoid(x):}" title="\Large sigmoid(x):" /> <- is an activation function applied solonely to the last layer.<br> <img src="https://latex.codecogs.com/svg.latex?\Large&space;sigmoid(x)=\frac{1}{1+e^{-x}}" title="\Large sigmoid(x)=\frac{1}{1+e^{-x}" />
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;L(A_{2},Y)=-\frac{1}{m}(Ylog(A^{[2]})+(1-Y)log(1-A^{[2]})+\lambda\sum_{l=1}^{L}\|W^{[l]}\|_2^2" title="\Large -\frac{1}{m}(Ylog(A^{[2]})+(1-Y)log(1-A^{[2]})+\lambda\sum_{l=1}^{L}\|W^{[l]}\|_2^2" /> 
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;L(A_{2},Y)=-\frac{1}{m}(Ylog(A^{[2]})+(1-Y)log(1-A^{[2]})" title="\Large -\frac{1}{m}(Ylog(A^{[2]})+(1-Y)log(1-A^{[2]})" /> 
 
 The method responsible to propagate information from layer to layer is described below: 
 ```python
@@ -197,28 +197,5 @@ def _backProp(self,dA,cache,activation):
 ```
 
 
-```markdown
-<img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
-\sqrt{2}
-$\sqrt{2}$.
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-
-
-### Support or Contact
 
