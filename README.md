@@ -234,5 +234,8 @@ Averaging Bias Correction:<br>
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;S_{dW}^{Corrected}=\frac{S_{dW}}{1-\beta_2^t}" title="\Large S_{dW}^{Corrected}=\frac{S_{dW}}{1-\beta_2^t}" /><br>
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;S_{db}^{Corrected}=\frac{S_{db}}{1-\beta_2^t}" title="\Large S_{db}^{Corrected}=\frac{S_{db}}{1-\beta_2^t}" /><br>
 
+Where <img src="https://latex.codecogs.com/svg.latex?\Large&space;\beta_1" title="\Large \beta_1" /><br> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;\beta_2" title="\Large \beta_2" /><br> are additional hyperparameters. 
+
 Updating Weights:<br>
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;W=W-\alpha\frac{V_{dW}^{Corrected}}{\sqrt{S_{dW}^{Corrected}}}" title="\Large W=W-\alpha\frac{V_{dW}^{Corrected}}{\sqrt{S_{dW}^{Corrected}}}" /><br>
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;b=b-\alpha\frac{V_{db}^{Corrected}}{\sqrt{S_{db}^{Corrected}}}" title="\Large b=b-\alpha\frac{V_{db}^{Corrected}}{\sqrt{S_{db}^{Corrected}}}" /><br>
