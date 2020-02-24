@@ -201,7 +201,9 @@ We provided three options for the optimization process: Mini-Batch Gradient Desc
 
 #### Gradient Descent:
 Is a classic algorithm in machined learning where the weights simultaneously updated as follow:
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;W^{[l]}=W^{[l]}-\alpha*dW^{[l]}" title="\Large W^{[l]}=W^{[l]}-\alpha*dW^{[l]}" /> 
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;W^{[l]}=W^{[l]}-\alpha*dW^{[l]}" title="\Large W^{[l]}=W^{[l]}-\alpha*dW^{[l]}" /> //
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;b^{[l]}=b^{[l]}-\alpha*db^{[l]}" title="\Large b^{[l]}=b^{[l]}-\alpha*db^{[l]}" /> 
 
 
 
