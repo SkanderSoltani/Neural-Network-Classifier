@@ -206,14 +206,14 @@ def _backProp(self,dA,cache,activation):
 ### 4. Optimization:
 We provided three options for the optimization process: Mini-Batch Gradient Descent, Mini-Batch Gradient Descent with Momentum and Mini-Batch Adaptivemoment Estimation (Adam). 
 
-#### Gradient Descent (GS):
+#### Gradient Descent (GD):
 Is a classic algorithm in machined learning where the weights simultaneously updated as follow:
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;W^{[l]}=W^{[l]}-\alpha*dW^{[l]}" title="\Large W^{[l]}=W^{[l]}-\alpha*dW^{[l]}" /> 
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;b^{[l]}=b^{[l]}-\alpha*db^{[l]}" title="\Large b^{[l]}=b^{[l]}-\alpha*db^{[l]}" /> 
 
-The main issue with the GS algorithm is that it is slow to converge due to unnecessary oscillations (Not in the direction of the optimal point) Please refer to diagram bellow: 
+The main issue with the GD algorithm is that it is slow to converge due to unnecessary oscillations (Not in the direction of the optimal point) Please refer to diagram bellow: 
 
 ![](images/GS.png)
 
@@ -228,7 +228,7 @@ Where <img src="https://latex.codecogs.com/svg.latex?\Large&space;\Beta" title="
 ![](images/GS_Mo.png)
 
 #### Adaptive Moment Estimation (ADAM):
-Adam algorithm is a combination of GS with momentum and the RMSProp algorithms and serves the same purpose as GS with momentum which is increasing learning speed towards the optimal weights. The weights are updated as follow:
+Adam algorithm is a combination of GD with momentum and the RMSProp algorithms and serves the same purpose as GD with momentum which is increasing learning speed towards the optimal weights. The weights are updated as follow:
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;V_{dW}=\beta_1*V_{dW}+(1-\beta_1)dW" title="\Large V_{dW}=\beta_1*V_{dW}+(1-\Beta_1)dW" /><br> 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;V_{db}=\beta_1*V_{db}+(1-\beta_1)db" title="\Large V_{db}=\beta_1*V_{db}+(1-\beta_1)db" /><br>
