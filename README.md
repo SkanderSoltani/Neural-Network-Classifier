@@ -221,10 +221,18 @@ Where <img src="https://latex.codecogs.com/svg.latex?\Large&space;\Beta" title="
 ![](images/GS_Mo.png)
 
 #### Adaptive Moment Estimation (ADAM):
-Adam algorithm is a combination of GS with momentum and the RMSProp algorithms and serves the same purpose as GS with momentum which is faster learning toward the optimal weights. The weights are updated as follow:
+Adam algorithm is a combination of GS with momentum and the RMSProp algorithms and serves the same purpose as GS with momentum which is increasing learning speed towards the optimal weights. The weights are updated as follow:
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;V_{dW}=\beta_1*V_{dW}+(1-\beta_1)dW" title="\Large V_{dW}=\beta_1*V_{dW}+(1-\Beta_1)dW" /><br> 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;V_{db}=\beta_1*V_{db}+(1-\beta_1)db" title="\Large V_{db}=\beta_1*V_{db}+(1-\beta_1)db" /><br>
-
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;S_{dW}=\beta_2*S_{dW}+(1-\beta_2)dW^2" title="\Large S_{dW}=\beta_2*S_{dW}+(1-\Beta_2)dW^2" /><br> 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;S_{db}=\beta_2*S_{db}+(1-\beta_2)db^2" title="\Large S_{db}=\beta_2*S_{db}+(1-\beta_2)db^2" /><br>
+
+Averaging Bias Correction:<br>
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;V_{dW}^{Corrected}=\frac{V_{dW}}{1-\beta_1^t}" title="\Large V_{dW}^{Corrected}=\frac{V_{dW}}{1-\beta_1^t}" /><br>
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;V_{db}^{Corrected}=\frac{V_{db}}{1-\beta_1^t}" title="\Large V_{db}^{Corrected}=\frac{V_{db}}{1-\beta_1^t}" /><br>
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;S_{dW}^{Corrected}=\frac{S_{dW}}{1-\beta_2^t}" title="\Large S_{dW}^{Corrected}=\frac{S_{dW}}{1-\beta_2^t}" /><br>
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;S_{db}^{Corrected}=\frac{S_{db}}{1-\beta_2^t}" title="\Large S_{db}^{Corrected}=\frac{S_{db}}{1-\beta_2^t}" /><br>
+
+Updating Weights:<br>
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;W=W-\alpha\frac{V_{dW}^{Corrected}}{\sqrt{S_{dW}^{Corrected}}}" title="\Large W=W-\alpha\frac{V_{dW}^{Corrected}}{\sqrt{S_{dW}^{Corrected}}}" /><br>
