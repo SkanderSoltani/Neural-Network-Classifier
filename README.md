@@ -10,6 +10,9 @@ LogisticAnn is a personal project/memo developed with the goal to thoroughly stu
 LogisticAnn is a Neural Network classifier class. Please refer to the documentation below: 
 ![](images/doc.png)
 
+## Example
+![](images/example.png)
+
 ## Theory
 Artificial neural networks or connectionist systems are computing systems inspired by the biological neural networks that constitute animal brains. Such systems "learn" to perform tasks by considering examples, generally without being programmed with task-specific rules.
 
