@@ -197,7 +197,11 @@ def _backProp(self,dA,cache,activation):
 ```
 
 ### 4. Optimization:
+We provided three options for the optimization process: Mini-Batch Gradient Descent, Mini-Batch Gradient Descent with Momentum and Mini-Batch Adaptivemoment Estimation (Adam). 
 
+#### Gradient Descent:
+Is a classic algorithm in machined learning where the weights simultaneously updated as follow:
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;W^{[l]} = W^{[l]}-\alpha dW^{[l]}" title="\Large W^{[l]} = W^{[l]}-\alpha dW^{[l]}" /> 
 
 
 
