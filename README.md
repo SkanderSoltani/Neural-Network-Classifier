@@ -219,3 +219,12 @@ The Gradient Descent with Momentum is a modified Gradient Descent in which the w
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;b=b-\alpha*V_{db}" title="\Large b=b-\alpha*V_{db}" /><br>
 Where <img src="https://latex.codecogs.com/svg.latex?\Large&space;\Beta" title="\Large \Beta" /> is a new Hyperparameter to estimate. It is common to have <img src="https://latex.codecogs.com/svg.latex?\Large&space;\Beta=0.9" title="\Large \Beta=0.9" /> by default. The chart below illustratively compares the training phase with Gradient Descent vs. Gradient Descent with Momentum.
 ![](images/GS_Mo.png)
+
+#### Adaptive Moment Estimation (ADAM):
+Adam algorithm is a combination of GS with momentum and the RMSProp algorithms and serves the same purpose as GS with momentum which is faster learning toward the optimal weights. The weights are updated as follow:
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;V_{dW}=\beta_1*V_{dW}+(1-\beta_1)dW" title="\Large V_{dW}=\beta_1*V_{dW}+(1-\Beta_1)dW" /><br> 
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;V_{db}=\beta_1*V_{db}+(1-\beta_1)db" title="\Large V_{db}=\beta_1*V_{db}+(1-\beta_1)db" /><br>
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;S_{dW}=\beta_2*S_{dW}+(1-\beta_2)dW^2" title="\Large S_{dW}=\beta_2*S_{dW}+(1-\Beta_2)dW^2" /><br> 
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;S_{db}=\beta_2*S_{db}+(1-\beta_2)db^2" title="\Large S_{db}=\beta_2*S_{db}+(1-\beta_2)db^2" /><br>
