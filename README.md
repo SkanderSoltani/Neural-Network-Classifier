@@ -202,9 +202,22 @@ We provided three options for the optimization process: Mini-Batch Gradient Desc
 #### Gradient Descent (GS):
 Is a classic algorithm in machined learning where the weights simultaneously updated as follow:
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;W^{[l]}=W^{[l]}-\alpha*dW^{[l]}" title="\Large W^{[l]}=W^{[l]}-\alpha*dW^{[l]}" /> \\
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;W^{[l]}=W^{[l]}-\alpha*dW^{[l]}" title="\Large W^{[l]}=W^{[l]}-\alpha*dW^{[l]}" /> 
+
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;b^{[l]}=b^{[l]}-\alpha*db^{[l]}" title="\Large b^{[l]}=b^{[l]}-\alpha*db^{[l]}" /> 
 
-e main issue with the GS algorithm is that it is slow to converge due to unnecessary oscillations (Not in the direction of the optimal point) Please refer to diagram bellow:  
+The main issue with the GS algorithm is that it is slow to converge due to unnecessary oscillations (Not in the direction of the optimal point) Please refer to diagram bellow: 
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;V_{dW}=\Beta V_{dW}+(1-\Beta)dW" title="\Large V_{dW}=\Beta V_{dW}+(1-\Beta)dW" /><br> 
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;V_{db}=\Beta V_{db}+(1-\Beta)db" title="\Large V_{db}=\Beta V_{db}+(1-\Beta)db" /><br>
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;W = W-\alpha V_{dW}" title="\Large W = W-\alpha V_{dW}" /><br>
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;b = b-\alpha V_{db}" title="\Large b = b-\alpha V_{db}" />
+
+Where <img src="https://latex.codecogs.com/svg.latex?\Large&space;\Beta" title="\Large \Beta" /> is a new Hyperparameter to estimate. It is common to have <img src="https://latex.codecogs.com/svg.latex?\Large&space;\Beta=0.9" title="\Large \Beta=0.9" /> by default. 
+
 
 ![](images/GS.png)
+
+#### Gradient Descent With Momentum:
+The Gradient Descent with Momentum is a modified Gradient Descent in which the weights are updated using the exponential weighted average of the gradients instead of using the gradients directly. The intuition behind is to reduce the vertical unnecessary oscillations (illustrated in the plot bellow) and get a faster learning in the direction of the optimal point.  The weights are updated using the following equations:
