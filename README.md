@@ -224,7 +224,7 @@ The Gradient Descent with Momentum is a modified Gradient Descent in which the w
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;V_{db}=\beta*V_{db}+(1-\beta)db" title="\Large V_{db}=\beta*V_{db}+(1-\beta)db" /><br>
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;W=W-\alpha*V_{dW}" title="\Large W=W-\alpha*V_{dW}" /><br>
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;b=b-\alpha*V_{db}" title="\Large b=b-\alpha*V_{db}" /><br>
-Where <img src="https://latex.codecogs.com/svg.latex?\Large&space;\Beta" title="\Large \Beta" /> is a new Hyperparameter to estimate. It is common to have <img src="https://latex.codecogs.com/svg.latex?\Large&space;\Beta=0.9" title="\Large \Beta=0.9" /> by default. The chart below illustratively compares the training phase with Gradient Descent vs. Gradient Descent with Momentum.
+Where <img src="https://latex.codecogs.com/svg.latex?\Large&space;\beta" title="\Large \beta" /> is a new Hyperparameter to estimate. It is common to have <img src="https://latex.codecogs.com/svg.latex?\Large&space;\beta=0.9" title="\Large \beta=0.9" /> by default. The chart below illustratively compares the training phase with Gradient Descent vs. Gradient Descent with Momentum.
 ![](images/GS_Mo.png)
 
 #### Adaptive Moment Estimation (ADAM):
