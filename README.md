@@ -7,6 +7,7 @@
 LogisticAnn is a personal project/memo developed with the goal to thoroughly study Neural Networks along with Backpropagation and a plethora of gradient based optimization techniques used in the field.  During this journey, we will also derive all the formulas and implement the ensemble in a python class called LogisticAnn. The longer goal is to learn the mathematics underlying Neural Networks enough to be able to design and implement bespoke solutions adapted to specific problems as needed. In addition, this memo will serve as a reference point for upcoming projects. 
 
 ## Documentation
+LogisticAnn is a Neural Network classifier class. Please refer to the documentation below: 
 ![](images/doc.png)
 
 ## Theory
@@ -237,7 +238,7 @@ Averaging Bias Correction:<br>
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;S_{dW}^{Corrected}=\frac{S_{dW}}{1-\beta_2^t}" title="\Large S_{dW}^{Corrected}=\frac{S_{dW}}{1-\beta_2^t}" /><br>
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;S_{db}^{Corrected}=\frac{S_{db}}{1-\beta_2^t}" title="\Large S_{db}^{Corrected}=\frac{S_{db}}{1-\beta_2^t}" /><br>
 
-Where <img src="https://latex.codecogs.com/svg.latex?\Large&space;\beta_1" title="\Large \beta_1" /><br> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;\beta_2" title="\Large \beta_2" /><br> are additional hyperparameters. 
+Where <img src="https://latex.codecogs.com/svg.latex?\Large&space;\beta_1" title="\Large \beta_1" /> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;\beta_2" title="\Large \beta_2" />are additional hyperparameters. 
 
 Updating Weights:<br>
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;W=W-\alpha\frac{V_{dW}^{Corrected}}{\sqrt{S_{dW}^{Corrected}}}" title="\Large W=W-\alpha\frac{V_{dW}^{Corrected}}{\sqrt{S_{dW}^{Corrected}}}" /><br>
