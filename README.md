@@ -8,7 +8,7 @@ LogisticAnn is a personal project/memo developed with the goal to thoroughly stu
 
 ## Documentation
 LogisticAnn is a Neural Network classifier class. Please refer to the documentation below: 
-![](images/doc.PNG)
+![](images/docu.PNG)
 
 ## Example
 ![](images/example.PNG)
