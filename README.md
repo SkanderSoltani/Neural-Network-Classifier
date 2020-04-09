@@ -81,7 +81,7 @@ Where:
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;W_{l}:}" title="\Large W_{l}:" /> <- is the weight matrix of size 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;n_{l-1},n_{l}}" title="\Large n_{l-1},n_{l}" /> where 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;n_{l-1}" title="\Large n_{l-1}" /> and 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;n_{l}" title="\Large n_{l}" /> represent the size of the previous and current layer respectively. <img src="https://latex.codecogs.com/svg.latex?\Large&space;W_{l}}" title="\Large W_{l}" /> are also the target variables of our problem.  
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;n_{l}"title="\Large n_{l}"/> represent the size of the previous and current layer respectively. <img src="https://latex.codecogs.com/svg.latex?\Large&space;W_{l}}" title="\Large W_{l}" /> are also the target variables of our problem.  
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;g(x):}" title="\Large g(x):" /> <-  is the activation function for layer <img src="https://latex.codecogs.com/svg.latex?\Large&space;l}" title="\Large l" />. Our class gives the option to use a "relu" or "tanh" functions.<br>
    <u>relu:</u> <br>   <img src="https://latex.codecogs.com/svg.latex?\Large&space;g(x)=(Z_{l},0)^{+}" title="\Large g(x)=(Z_{l},0)^{+}" /><br>
